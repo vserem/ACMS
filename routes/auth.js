@@ -4,7 +4,7 @@ var router = express.Router();
 const User = require('../models/user');
 
 router.get('/signup', function (req, res) {
-    res.render('signup.html', { title: "ACMS | SignUp", messages: req.flash() });
+    res.render('signup.njk', { title: "ACMS | SignUp", messages: req.flash() });
 });
 
 
@@ -31,7 +31,7 @@ router.post('/signup', async function (req, res, next) {
 });
 
 router.get('/signin', function (req, res) {
-    res.render('signin.html', { title: "ACMS | SignIn", messages: req.flash() });
+    res.render('signin.njk', { title: "ACMS | SignIn", messages: req.flash() });
 });
 
 router.post('/signin', passport.authenticate('local', { successRedirect: "/dashboard", failureRedirect: '/auth/signin', failureFlash: true }));
