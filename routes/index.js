@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET Home Page. */
 router.get('/', function (req, res) {
-  res.render('index.njk', { title: 'ACMS | Home' });
+  res.render('home.njk', { title: 'ACMS | Home' });
 });
 
 /* GET Dashboard. */
